@@ -1,0 +1,14 @@
+include full_calendar_component/full_calendar_component.min.js
+include full_calendar_component/full_calendar_component.min.js.map
+include full_calendar_component/async-*.js
+include full_calendar_component/async-*.js.map
+include full_calendar_component/*-shared.js
+include full_calendar_component/*-shared.js.map
+include full_calendar_component/metadata.json
+include full_calendar_component/package-info.json
+include full_calendar_component/assets/style.css
+
+include README.md
+include LICENSE
+include package.json
+
