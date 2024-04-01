@@ -11,6 +11,28 @@
         "required": false,
         "description": ""
       },
+      "initialView": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'dayGridMonth'",
+          "computed": false
+        }
+      },
+      "headerToolbar": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    start: 'title',\n    center: '',\n    end: 'today prev,next'\n}",
+          "computed": false
+        }
+      },
       "initialDate": {
         "type": {
           "name": "string"
@@ -77,6 +99,105 @@
         "description": "",
         "defaultValue": {
           "value": "[]",
+          "computed": false
+        }
+      },
+      "views": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "resources": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "id": {
+                "name": "string",
+                "required": false
+              },
+              "title": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "businessHours": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "daysOfWeek": {
+                "name": "arrayOf",
+                "value": {
+                  "name": "number"
+                },
+                "required": false
+              },
+              "startTime": {
+                "name": "string",
+                "required": false
+              },
+              "endTime": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "nowIndicator": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "navLinks": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "multiMonthMaxColumns": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "2",
           "computed": false
         }
       },

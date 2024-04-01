@@ -10,12 +10,21 @@
 }
 
 \usage{
-fullCalendarComponent(id=NULL, clickedEvent=NULL, dateClicked=NULL, editable=NULL,
-events=NULL, initialDate=NULL, selectable=NULL)
+fullCalendarComponent(id=NULL, businessHours=NULL, clickedEvent=NULL,
+dateClicked=NULL, editable=NULL, events=NULL,
+headerToolbar=NULL, initialDate=NULL, initialView=NULL,
+multiMonthMaxColumns=NULL, navLinks=NULL, nowIndicator=NULL,
+resources=NULL, selectable=NULL, views=NULL)
 }
 
 \arguments{
 \item{id}{Character. }
+
+\item{businessHours}{List of lists containing elements 'daysofweek', 'starttime', 'endtime'.
+those elements have the following types:
+  - daysofweek (list of numerics; optional)
+  - starttime (character; optional)
+  - endtime (character; optional)s. }
 
 \item{clickedEvent}{Named list. }
 
@@ -31,9 +40,26 @@ those elements have the following types:
   - classname (character; optional)
   - context (character; optional)s. }
 
+\item{headerToolbar}{Named list. }
+
 \item{initialDate}{Character. }
 
+\item{initialView}{Character. }
+
+\item{multiMonthMaxColumns}{Numeric. }
+
+\item{navLinks}{Logical. }
+
+\item{nowIndicator}{Logical. }
+
+\item{resources}{List of lists containing elements 'id', 'title'.
+those elements have the following types:
+  - id (character; optional)
+  - title (character; optional)s. }
+
 \item{selectable}{Logical. }
+
+\item{views}{Named list. }
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

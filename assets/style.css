@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+/* the main calendar container theme */
+
+/*.fc { !* the main calendar container *!*/
+/*    background-color: #ffffff;*/
+/*    color: #ecf0f1;*/
+/*}*/
+
+/*.fc-daygrid-day { !* the individual day cells *!*/
+/*    background-color: #1d2731;*/
+/*}*/
+
+/*.fc-event { !* the events *!*/
+/*    background-color: #3498db;*/
+/*    border-color: #3498db;*/
+/*}*/
+
 :root {
   --bs-blue: #63B3ED;
   --bs-indigo: #596CFF;

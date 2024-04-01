@@ -27,19 +27,30 @@ formatted_date = today.strftime("%Y-%m-%d")
 app.layout = html.Div(
     [
         fcc.FullCalendarComponent(
-            id="calendar",
-            initialDate=f"2024-04-01",
-            editable=True,
-            selectable=True,
+            id="calendar",  # Unique ID for the component
+            initialView="dayGridMonth",  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
+            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
+            headerToolbar={
+                "left": "prev,next today",
+                "center": "title",
+                "right": "dayGridMonth,timeGridWeek,timeGridDay",
+            },  # Calendar header
+            initialDate=f"2024-04-01",  # Start date for calendar
+            editable=True,  # Allow events to be edited
+            selectable=True,  # Allow dates to be selected
             events=[
                 {
-                    "title": "Pip Install Python",
-                    "start": f"{formatted_date}",
-                    "end": f"{formatted_date}",
-                    "className": "bg-gradient-success",
-                    "context": "Pip Install FullCalendar",
-                }
+                    "title": "Pip Install Python",  # Event title
+                    "start": f"{formatted_date}T07:00:00",  # Event start date
+                    "end": f"{formatted_date}T10:00:00",  # Event end date
+                    "className": "bg-gradient-success",  # Event color
+                    "extendedProps": {
+                        "context": "Pip Install FullCalendar",  # On event click body context
+                    },
+                },
             ],
+            nowIndicator=True,  # Show current time indicator
+            navLinks=True,  # Allow navigation to other dates
         ),
         dmc.Modal(
             id="modal",
@@ -278,4 +289,4 @@ def display_output(value, charCount):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8057)
+    app.run_server(debug=True, port=8056)
