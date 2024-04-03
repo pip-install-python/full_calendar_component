@@ -14,7 +14,8 @@ fullCalendarComponent(id=NULL, businessHours=NULL, clickedEvent=NULL,
 dateClicked=NULL, editable=NULL, events=NULL,
 headerToolbar=NULL, initialDate=NULL, initialView=NULL,
 multiMonthMaxColumns=NULL, navLinks=NULL, nowIndicator=NULL,
-resources=NULL, selectable=NULL, views=NULL)
+resources=NULL, selectable=NULL, timeClicked=NULL,
+views=NULL)
 }
 
 \arguments{
@@ -58,6 +59,8 @@ those elements have the following types:
   - title (character; optional)s. }
 
 \item{selectable}{Logical. }
+
+\item{timeClicked}{Character. }
 
 \item{views}{Named list. }
 }

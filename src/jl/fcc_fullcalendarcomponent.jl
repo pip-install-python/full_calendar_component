@@ -35,10 +35,11 @@ Those elements have the following types:
   - `id` (String; optional)
   - `title` (String; optional)s
 - `selectable` (Bool; optional)
+- `timeClicked` (String; optional)
 - `views` (Dict; optional)
 """
 function fcc_fullcalendarcomponent(; kwargs...)
-        available_props = Symbol[:id, :businessHours, :clickedEvent, :dateClicked, :editable, :events, :headerToolbar, :initialDate, :initialView, :multiMonthMaxColumns, :navLinks, :nowIndicator, :resources, :selectable, :views]
+        available_props = Symbol[:id, :businessHours, :clickedEvent, :dateClicked, :editable, :events, :headerToolbar, :initialDate, :initialView, :multiMonthMaxColumns, :navLinks, :nowIndicator, :resources, :selectable, :timeClicked, :views]
         wild_props = Symbol[]
         return Component("fcc_fullcalendarcomponent", "FullCalendarComponent", "full_calendar_component", available_props, wild_props; kwargs...)
 end

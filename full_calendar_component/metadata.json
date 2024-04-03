@@ -223,6 +223,17 @@
           "computed": false
         }
       },
+      "timeClicked": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
       "setProps": {
         "type": {
           "name": "func"

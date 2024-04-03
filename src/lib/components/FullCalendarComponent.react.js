@@ -9,6 +9,10 @@ import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
+import '../../../style/style.css';
+
+
+
 const FullCalendarComponent = (props) => {
     const {id, initialView, headerToolbar, initialDate, selectable, editable, events, views, multiMonthMaxColumns, resources, navLinks, businessHours, nowIndicator} = props;
 
@@ -22,7 +26,13 @@ const FullCalendarComponent = (props) => {
 
     const handleDateClick = (info) => {
     if (props.setProps) {
-        props.setProps({ dateClicked: info.dateStr });
+            props.setProps({ dateClicked: info.dateStr });
+        }
+    };
+
+    const handleTimeClick = (info) => {
+    if (props.setProps) {
+        props.setProps({ timeClicked: info.timeStr });
     }
 };
 
@@ -57,6 +67,7 @@ const FullCalendarComponent = (props) => {
                 // }}
                 eventClick={handleEventClick}
                 dateClick={handleDateClick}
+                slotClick={handleTimeClick}
             />
         </div>
 
@@ -80,6 +91,7 @@ FullCalendarComponent.defaultProps = {
     multiMonthMaxColumns: 2,
     clickedEvent: null,
     dateClicked: null,
+    timeClicked: null,
     views: {},
     resources: [],
     setProps: () => {}
@@ -114,7 +126,8 @@ FullCalendarComponent.propTypes = {
     multiMonthMaxColumns: PropTypes.number,
     clickedEvent: PropTypes.object,
     dateClicked: PropTypes.string,
-    setProps: PropTypes.func
+    timeClicked: PropTypes.string,
+    setProps: PropTypes.func,
 };
 
 export default FullCalendarComponent;

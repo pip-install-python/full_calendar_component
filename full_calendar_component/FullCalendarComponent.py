@@ -63,16 +63,18 @@ Keyword arguments:
 
 - selectable (boolean; default True)
 
+- timeClicked (string; optional)
+
 - views (dict; optional)"""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'full_calendar_component'
     _type = 'FullCalendarComponent'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, initialView=Component.UNDEFINED, headerToolbar=Component.UNDEFINED, initialDate=Component.UNDEFINED, selectable=Component.UNDEFINED, editable=Component.UNDEFINED, events=Component.UNDEFINED, views=Component.UNDEFINED, resources=Component.UNDEFINED, businessHours=Component.UNDEFINED, nowIndicator=Component.UNDEFINED, navLinks=Component.UNDEFINED, multiMonthMaxColumns=Component.UNDEFINED, clickedEvent=Component.UNDEFINED, dateClicked=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'businessHours', 'clickedEvent', 'dateClicked', 'editable', 'events', 'headerToolbar', 'initialDate', 'initialView', 'multiMonthMaxColumns', 'navLinks', 'nowIndicator', 'resources', 'selectable', 'views']
+    def __init__(self, id=Component.UNDEFINED, initialView=Component.UNDEFINED, headerToolbar=Component.UNDEFINED, initialDate=Component.UNDEFINED, selectable=Component.UNDEFINED, editable=Component.UNDEFINED, events=Component.UNDEFINED, views=Component.UNDEFINED, resources=Component.UNDEFINED, businessHours=Component.UNDEFINED, nowIndicator=Component.UNDEFINED, navLinks=Component.UNDEFINED, multiMonthMaxColumns=Component.UNDEFINED, clickedEvent=Component.UNDEFINED, dateClicked=Component.UNDEFINED, timeClicked=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'businessHours', 'clickedEvent', 'dateClicked', 'editable', 'events', 'headerToolbar', 'initialDate', 'initialView', 'multiMonthMaxColumns', 'navLinks', 'nowIndicator', 'resources', 'selectable', 'timeClicked', 'views']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'businessHours', 'clickedEvent', 'dateClicked', 'editable', 'events', 'headerToolbar', 'initialDate', 'initialView', 'multiMonthMaxColumns', 'navLinks', 'nowIndicator', 'resources', 'selectable', 'views']
+        self.available_properties = ['id', 'businessHours', 'clickedEvent', 'dateClicked', 'editable', 'events', 'headerToolbar', 'initialDate', 'initialView', 'multiMonthMaxColumns', 'navLinks', 'nowIndicator', 'resources', 'selectable', 'timeClicked', 'views']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
