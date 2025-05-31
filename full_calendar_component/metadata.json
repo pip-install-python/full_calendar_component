@@ -40,7 +40,7 @@
         "required": false,
         "description": "",
         "defaultValue": {
-          "value": "'2021-12-01'",
+          "value": "'2024-01-01'",
           "computed": false
         }
       },

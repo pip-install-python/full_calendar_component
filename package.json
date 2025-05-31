@@ -1,6 +1,6 @@
 {
   "name": "full_calendar_component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "fullcalendar.io component for Dash",
   "repository": {
     "type": "git",

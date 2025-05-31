@@ -5,8 +5,6 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import multiMonthPlugin from '@fullcalendar/multimonth';
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
-import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
 import '../../../style/style.css';
@@ -33,14 +31,16 @@ const FullCalendarComponent = (props) => {
     const handleTimeClick = (info) => {
     if (props.setProps) {
         props.setProps({ timeClicked: info.timeStr });
-    }
-};
+        }
+    };
+
+
 
     return (
 
         <div id={id}>
             <FullCalendar
-                plugins={[ dayGridPlugin, timeGridPlugin, listPlugin, multiMonthPlugin, interactionPlugin, resourceTimelinePlugin, resourceTimeGridPlugin ]}
+                plugins={[ dayGridPlugin, timeGridPlugin, listPlugin, multiMonthPlugin, interactionPlugin]}
                 initialView={initialView}
                 headerToolbar={headerToolbar}
                 selectable={selectable}
@@ -82,7 +82,7 @@ FullCalendarComponent.defaultProps = {
         end: 'today prev,next'
     },
     events: [],
-    initialDate: '2021-12-01',
+    initialDate: '2024-01-01',
     selectable: true,
     editable: true,
     businessHours: [],

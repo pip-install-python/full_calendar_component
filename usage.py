@@ -5,7 +5,9 @@ from dash.exceptions import PreventUpdate
 from datetime import datetime, date, timedelta
 import dash_quill
 
+
 app = Dash(__name__, prevent_initial_callbacks=True)
+
 
 quill_mods = [
     [{"header": "1"}, {"header": "2"}, {"font": []}],
@@ -15,7 +17,7 @@ quill_mods = [
     ["link", "image"],
 ]
 
-# Get today's date
+# Get today's date                                                                                            
 today = datetime.now()
 
 # Format the date
@@ -365,12 +367,22 @@ def add_new_event(
 ):
     if n is None:
         raise PreventUpdate
-
+    print(start_date, start_time, end_date, end_time, event_name, event_color)
+    print()
+    print('time_obj')
     start_time_obj = datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
-    end_time_obj = datetime.strptime(end_time, "%Y-%m-%d %H:%M:%S")
+    print(start_time_obj)
+    if 'T' in end_time:
+        end_time_obj = datetime.strptime(end_time, "%Y-%m-%dT%H:%M:%S")
+    else:
+        end_time_obj = datetime.strptime(end_time, "%Y-%m-%d %H:%M:%S")
+    print(end_time_obj)
 
+    print('time_str')
     start_time_str = start_time_obj.strftime("%H:%M:%S")
+    print(start_time_str)
     end_time_str = end_time_obj.strftime("%H:%M:%S")
+    print(end_time_str)
 
     start_date = f"{start_date}T{start_time_str}"
     end_date = f"{end_date}T{end_time_str}"

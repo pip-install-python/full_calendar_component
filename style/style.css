@@ -794,8 +794,8 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
 }
 
 .fc .fc-non-business {
-  background: rgba(215, 215, 215, 0.3);
-  background: var(--fc-non-business-color, rgba(215, 215, 215, 0.3));
+    background: rgba(215, 215, 215, 0.3);
+    background: hsl(0deg 0% 0% / 81%);
 }
 
 .fc .fc-bg-event {

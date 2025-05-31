@@ -43,7 +43,7 @@ Keyword arguments:
 
 - headerToolbar (dict; default {    start: 'title',    center: '',    end: 'today prev,next'})
 
-- initialDate (string; default '2021-12-01')
+- initialDate (string; default '2024-01-01')
 
 - initialView (string; default 'dayGridMonth')
 

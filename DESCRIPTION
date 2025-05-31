@@ -1,6 +1,6 @@
 Package: fullCalendarComponent
 Title: fullcalendar.io component for Dash
-Version: 0.0.3
+Version: 0.0.4
 Description: fullcalendar.io component for Dash
 Depends: R (>= 3.0.2)
 Imports: 
